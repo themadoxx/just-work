@@ -19,34 +19,105 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Fonction pour afficher les infos et tailles de sous-types
     function displaySubProductInfo(subType) {
+        // Définissez ici les caractéristiques propres à chaque sous-type
+        const features = {
+            "Oreillers en duvet Confort": [
+                "Duvet Downproof 100% coton",
+                "Confort exceptionnel",
+                "Souplesse et maintien"
+            ],
+            "Oreillers en Microfibres": [
+                "Microfibre de haute qualité pour une douceur optimale",
+                "Support souple adapté à toutes les positions de sommeil",
+                "Facile d'entretien et durable"
+            ],
+            "Couettes mi-saison en Duvet": [
+                "Remplissage en duvet pour une chaleur naturelle",
+                "Légèreté et confort toute l'année",
+                "Respirabilité supérieure pour éviter l'accumulation d'humidité"
+            ],
+            "Couettes en Microfibres": [
+                "Isolation thermique sans l'excès de poids",
+                "Toucher doux et enveloppant",
+                "Hypoallergénique et anti-acarien"
+            ],
+            "Sur-Matelas en Duvet": [
+                "Couche supérieure en duvet pour un confort de sommeil de luxe",
+                "Améliore le soutien et prolonge la durée de vie de votre matelas",
+                "Régulation thermique pour une température de sommeil idéale"
+            ],
+            "Sur-Matelas en Microfibres": [
+                "Confort amélioré grâce à une couche supplémentaire de soutien",
+                "Microfibre respirante pour un sommeil frais",
+                "Facile à installer et à entretenir"
+            ]
+        };
+        
+
         let taillesHtml = '<h3>Tailles Disponibles</h3>';
         let infoHtml = `<h3>Info sur ${subType}</h3>`;
+
         
-        if (subType.includes('Oreillers')) {
-            taillesHtml += `
-                <span class="badge badge-light-primary">50/70</span>
-                <span class="badge badge-light-primary">50/90</span>
-                <span class="badge badge-light-primary">60/60</span>
-                <span class="badge badge-light-success">Tailles sur demande</span>
-            `;
-            infoHtml += `
-            <span class="badge badge-primary">Duvet Downproof 100% coton</span>
-            <span class="badge badge-primary">Confort </span>
-            <span class="badge badge-primary">Souplesse </span>
-            `;
-        } else {
-            taillesHtml += `
-                <span class="badge badge-light-primary">170x230</span>
-                <span class="badge badge-light-primary">220x240</span>
-                <span class="badge badge-light-primary">240x260</span>
-                <span class="badge badge-light-primary">260x280</span>
-                <span class="badge badge-light-success">Tailles sur demande</span>
-            `;
-            infoHtml += `
-                <span class="badge badge-primary">Confort</span>
-                <span class="badge badge-primary">Souplesse </span>
-            `;
-        }
+    // Utilisez les caractéristiques propres à chaque sous-type
+    const subTypeFeatures = features[subType];
+    if (subTypeFeatures && subTypeFeatures.length > 0) {
+        subTypeFeatures.forEach(feature => {
+            infoHtml += `<span class="badge badge-primary m-1">${feature}</span>`;
+        });
+    }
+
+    const tailles = {
+        "Oreillers en duvet Confort": [
+            "50/70",
+            "50/90",
+            "60/60",
+            "Tailles sur demande"
+        ],
+        "Oreillers en Microfibres": [
+            "50/70",
+            "50/90",
+            "60/60",
+            "Tailles sur demande"
+        ],
+        "Couettes mi-saison en Duvet": [
+            "170x230",
+            "220x240",
+            "240x260",
+            "260x280",
+            "Tailles sur demande"
+        ],
+        "Couettes en Microfibres": [
+            "170x230",
+            "220x240",
+            "240x260",
+            "260x280",
+            "Tailles sur demande"
+        ],
+        "Sur-Matelas en Duvet": [
+            "170x230",
+            "220x240",
+            "240x260",
+            "260x280",
+            "Tailles sur demande"
+        ],
+        "Sur-Matelas en Microfibres": [
+            "170x230",
+            "220x240",
+            "240x260",
+            "260x280",
+            "Tailles sur demande"
+        ]
+    };
+
+   
+    const selectedTailles = tailles[subType];
+    if (selectedTailles) {
+        selectedTailles.forEach(taille => {
+            const badgeClass = taille === "Tailles sur demande" ? "badge-light-success" : "badge-light-primary";
+            taillesHtml += `<span class="badge ${badgeClass}">${taille}</span> `;
+        });
+    }
+    taillesHtml += '</div>';
 
         document.getElementById('tailles').innerHTML = taillesHtml;
         infoContainer.querySelector('.garnissage').innerHTML = infoHtml;
