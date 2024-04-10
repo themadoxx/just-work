@@ -154,8 +154,8 @@
 							<!--end::Client-->
 				
 							<!--begin::Client-->
-							<div class="d-flex flex-center m-3 m-md-6" data-bs-toggle="tooltip" title="Aspnetzero">
-								<img src="assets/media/svg/brand-logos/kempinski.svg" class="mh-30px mh-lg-40px" alt="" />
+							<div class="d-flex flex-center m-3 m-md-6" data-bs-toggle="tooltip" style="filter: invert(0%)!important;" title="Aspnetzero">
+								<img src="assets/media/svg/brand-logos/made-in-morocco.svg" class="mh-30px mh-lg-40px" alt="" />
 							</div>
 							<!--end::Client-->
 							<!--begin::Client-->
@@ -522,7 +522,7 @@
 								<!--begin::Person-->
 								<div class="mb-0">
 									<!--begin::Name-->
-									<a href="#" class="text-gray-900 fw-bold text-hover-primary fs-3">Polycoton</a>
+									<a href="#" class="text-gray-900 fw-bold text-hover-primary fs-3">Couettes en Microfibres</a>
 									<!--end::Name-->
 									<!--begin::Position-->
 									<div class="text-muted fs-6 fw-semibold mt-1">Durabilité et Confort</div>
@@ -565,28 +565,29 @@
 					</div>
 					<!--end::Slider-->
 					
-					<div class="text-center mt-10 mb-50">
-   
-    <div class="buttons-container">
-        <button class="btn btn-sm btn-flex btn-secondary fw-bold" data-product="oreillers">Oreillers</button>
-        <button class="btn btn-sm btn-flex btn-secondary fw-bold" data-product="couettes">Couettes</button>
-        <button class="btn btn-sm btn-flex btn-secondary fw-bold" data-product="surmatelas">Sur-Matelas</button>
-    </div>
-    <div class="info-container">
-        <div class="garnissage mt-10 mb-10">
-            <h3>Garnissage</h3>
-           
-			<span class="badge badge-primary">30% Duvet</span>
-			<span class="badge badge-primary">40% Duvet</span>
-			<span class="badge badge-primary">70% Duvet</span>
-			<span class="badge badge-primary">90% Duvet</span>
+						<div class="text-center mt-10 mb-50">
+							<!-- Boutons des types de produits -->
+							<div class="buttons-container">
+								<button class="btn btn-sm btn-flex btn-secondary fw-bold product-button" data-product="oreillers">Oreillers</button>
+								<button class="btn btn-sm btn-flex btn-secondary fw-bold product-button" data-product="couettes">Couettes</button>
+								<button class="btn btn-sm btn-flex btn-secondary fw-bold product-button" data-product="surmatelas">Sur-Matelas</button>
+							</div>
 
-        </div>
-        <div class="tailles mt-10 mb-10" id="tailles">
-            <!-- Les tailles seront injectées ici par JavaScript -->
-        </div>
-    </div>
-</div>
+							<!-- Container pour les sous-types de produits -->
+							<div class="buttons-container mt-10 sub-product-container" style="display: none; flex-direction: row; justify-content: center; align-items: center;">
+								<!-- Les boutons de sous-types seront injectés ici par JavaScript -->
+							</div>
+
+							<!-- Container pour les tailles et infos supplémentaires -->
+							<div class="info-container" style="display:none;">
+								<div class="garnissage mt-10 mb-10">
+									<!-- Les infos sur les garnissages seront injectées ici par JavaScript -->
+								</div>
+								<div class="tailles mt-10 mb-10" id="tailles">
+									<!-- Les tailles seront injectées ici par JavaScript -->
+								</div>
+							</div>
+						</div>
 
 
 				</div>
