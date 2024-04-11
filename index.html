@@ -24,6 +24,45 @@
 		<!--end::Global Stylesheets Bundle-->
 		<script>// Frame-busting to prevent site from being loaded within a frame without permission (click-jacking) if (window.top != window.self) { window.top.location.replace(window.self.location.href); }</script>
 		<script src="https://kit.fontawesome.com/14d2699848.js" crossorigin="anonymous"></script>
+		
+		<style>
+.video-section {
+    margin-bottom: 50px; /* Ajoute un espace en bas de la section */
+}
+
+.video-responsive {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%; /* Ratio 16:9 */
+    border-radius: 0; /* Pas de bords arrondis sur petits écrans */
+}
+
+.video-responsive video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Clé pour couvrir l'espace sans laisser de blanc */
+}
+
+/* Média query pour ordinateurs et grands écrans */
+@media (min-width: 992px) {
+    .video-responsive {
+        border-radius: 15px; /* Bords arrondis uniquement sur grands écrans */
+    }
+
+    .video-responsive video {
+        border-radius: 15px; /* Bords arrondis sur la vidéo pour grands écrans */
+    }
+}
+
+
+
+		</style>
 	</head>
 	<!--end::Head-->
 	<!--begin::Body-->
@@ -143,23 +182,23 @@
 						<!--begin::Clients-->
 						<div class="d-flex flex-center flex-wrap position-relative px-5">
 							<!--begin::Client-->
-							<div class="d-flex flex-center m-3 m-md-6" data-bs-toggle="tooltip" title="Vodafone">
-								<img src="assets/media/svg/brand-logos/siemens.svg" class="mh-30px mh-lg-40px" alt="" />
+							<div class="d-flex flex-center m-3 m-md-6" data-bs-toggle="tooltip" style="filter: invert(100%);" title="Epeda">
+								<img src="assets/media/svg/brand-logos/epeda.svg" class="mh-55px mh-lg-40px" alt="" />
 							</div>
 							<!--end::Client-->
 							<!--begin::Client-->
-							<div class="d-flex flex-center m-3 m-md-6" data-bs-toggle="tooltip" style="width: 150%;" title="Radisson Maroc">
-								<img src="assets/media/svg/brand-logos/kempinski.svg" class="mh-30px mh-lg-40px" alt="" />
+							<div class="d-flex flex-center m-3 m-md-6" data-bs-toggle="tooltip" title="Label Made in Morocco">
+								<img src="assets/media/svg/brand-logos/kempinski.svg" class="mh-50px mh-lg-40px" alt="" />
 							</div>
 							<!--end::Client-->
 				
 							<!--begin::Client-->
-							<div class="d-flex flex-center m-3 m-md-6" data-bs-toggle="tooltip" title="Aspnetzero">
+							<div class="d-flex flex-center m-3 m-md-6" data-bs-toggle="tooltip" title="Simmons">
 								<img src="assets/media/svg/brand-logos/simmons.svg" class="mh-30px mh-lg-40px" alt="" />
 							</div>
 							<!--end::Client-->
 							<!--begin::Client-->
-							<div class="d-flex flex-center m-3 m-md-6" data-bs-toggle="tooltip"  style="filter: invert(100%);" title="AON - Empower Results">
+							<div class="d-flex flex-center m-3 m-md-6" data-bs-toggle="tooltip"  style="filter: invert(100%);" title="Truman">
 								<img src="assets/media/svg/brand-logos/englander.svg" class="mh-30px mh-lg-40px" alt="" />
 							</div>
 							<!--end::Client-->
@@ -169,13 +208,23 @@
 							</div>
 							<!--end::Client-->
 							<!--begin::Client-->
-							<div class="d-flex flex-center m-3 m-md-6" data-bs-toggle="tooltip" style="filter: invert(100%);" title="Aspnetzero">
+							<div class="d-flex flex-center m-3 m-md-6" data-bs-toggle="tooltip" style="filter: invert(100%);" title="Treca">
 								<img src="assets/media/svg/brand-logos/treca.svg" class="mh-30px mh-lg-40px" alt="" />
 							</div>
 							<!--end::Client-->
 							<!--begin::Client-->
-							<div class="d-flex flex-center m-3 m-md-6" data-bs-toggle="tooltip" style="filter: invert(100%);" title="Radisson Maroc">
+							<div class="d-flex flex-center m-3 m-md-6" data-bs-toggle="tooltip" style="filter: invert(100%);" title="Tempur">
 								<img src="assets/media/svg/brand-logos/tempur.svg" class="mh-30px mh-lg-40px" alt="" />
+							</div>
+							<!--end::Client-->
+							<!--begin::Client-->
+							<div class="d-flex flex-center m-3 m-md-6" data-bs-toggle="tooltip"  title="Bultex">
+								<img src="assets/media/svg/brand-logos/bultex.svg" class="mh-30px mh-lg-40px" alt="" />
+							</div>
+							<!--end::Client-->
+							<!--begin::Client-->
+							<div class="d-flex flex-center m-3 m-md-6" data-bs-toggle="tooltip" title="Emma Matelas">
+								<img src="assets/media/svg/brand-logos/emma.svg" class="mh-30px mh-lg-40px" alt="" />
 							</div>
 							<!--end::Client-->
 				
@@ -196,6 +245,27 @@
 			<!--end::Header Section-->
 
 					
+
+			<!--Begin::VideoSection-->
+			<section class="video-section text-center">
+				<!--begin::Container-->
+				<div class="container">
+					<div class="row justify-content-center">
+						<div class="col-md-8">
+							<!-- Video Responsive Wrapper -->
+							<div class="video-responsive">
+								<video width="auto" height="auto" controls>
+									<source src="assets/media/video/video-hero.mp4" type="video/mp4">
+									Your browser does not support HTML video.
+								</video>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--end::Container-->
+			</section>
+			<!--End::VideoSection-->
+
 
 			<!--begin::How It Works Section-->
 			<div class="mb-n10 mb-lg-n20 z-index-2">
@@ -346,7 +416,7 @@
 				</div>
 				<!--end::Curve top-->
 				<!--begin::Wrapper-->
-				<div class="pb-15 pt-18 landing-dark-bg">
+				<div class="pb-15 pt-18 landing-dark-bg" style="margin-top: -1px;">
 					<!--begin::Container-->
 					<div class="container">
 						<!--begin::Heading-->
