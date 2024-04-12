@@ -26,7 +26,99 @@
 		<script src="https://kit.fontawesome.com/14d2699848.js" crossorigin="anonymous"></script>
 		
 		<style>
-		
+		/*************/
+.banniere {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.images-cote-a-cote {
+  display: flex;
+  flex-direction: column; /* Change à column sur mobiles pour les images en succession */
+  width: 100%;
+  
+}
+
+.image-container {
+  flex: 1; /* Adaptatif pour les écrans de toutes tailles */
+  position: relative;
+  margin-left: 0px; /* Ajoute un peu d'espace entre les images sur mobile */
+}
+
+/* Ajuste la taille des images pour grands écrans et les rend carrées */
+@media (min-width: 768px) {
+  .images-cote-a-cote {
+      flex-direction: row; /* Images côte à côte */
+      margin-top: 10px;
+  }
+  .image-container {
+      width: calc(50% - 10px); /* 50% de l'espace disponible, ajustement pour la marge */
+      height: 0; /* Empêche l'espace initial */
+      padding-bottom: calc(50% - 10px); /* Hauteur égale à la largeur, moins la marge, pour rendre l'image carrée */
+      margin: 0px; /* Espace entre les images */
+  }
+  .image-container img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Garantit que les images couvrent l'espace sans déformation */
+  }
+}
+
+/* Styles pour les overlays */
+.overlay-special {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white; /* Assure la visibilité du texte */
+}
+
+/* Styles de la section-hero et main-text */
+.section-hero {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px; /* Espace après les images */
+}
+
+.section-hero .main-text {
+  text-align: center;
+  padding: 20px;
+  width: 80%; /* Ajustez selon les besoins pour contrôler la "carrure" du texte */
+  margin: auto; /* Centre le bloc de texte dans son conteneur */
+}
+
+.image-container img {
+	border-radius: 5px;
+}
+
+/* Ajustements pour mobiles pour rendre les images plus hautes */
+@media (max-width: 767px) {
+  .image-container {
+      width: 100%; /* Prend toute la largeur disponible */
+      height: 0;
+      margin-bottom: 15px;
+      margin-top:20px;
+  }
+}
+
+/* Ajustements spécifiques pour les grands écrans */
+@media (min-width: 768px) {
+  .images-cote-a-cote .image-container:nth-child(1) {
+      margin-right: 5px; /* Marge à droite pour le premier élément */
+  }
+
+  .images-cote-a-cote .image-container:nth-child(2) {
+      margin-left: 5px; /* Marge à gauche pour le deuxième élément */
+  }
+}
+
 .video-section {
     margin-bottom: 50px; /* Ajoute un espace en bas de la section */
 
@@ -354,6 +446,26 @@
 						<!--end::Col-->
 					</div>
 					<!--end::Row-->
+
+
+					<section class="banniere">
+		<div class="images-cote-a-cote">
+			<div class="image-container">
+				<img src="assets/media/stock/just/thumbnail_2.jpg" alt="Couettes">
+				<div class="overlay-special">
+					<h2>Découvrez L'Atelier Just-White.</h2>
+					
+				</div>
+			</div>
+			<div class="image-container">
+				<img src="assets/media/stock/just/grey-white-clouds.jpg" alt="Sur-Matelas">
+				<div class="overlay-special">
+					<h1>Spécialistes du Duvet & Microfibres</h1>
+					
+				</div>
+			</div>
+		</div>
+	</section>
 					<!--begin::Product slider-->
 					<div class="tns tns-default">
 						<!--begin::Slider-->
