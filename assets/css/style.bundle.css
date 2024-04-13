@@ -48011,11 +48011,11 @@ a:hover {
 }
 
 .landing-dark-bg {
-  background-color: #13263C;
+  background-color: #11114E;
 }
 
 .landing-dark-color {
-  color: #13263C;
+  color: #11114E;
 }
 
 .landing-dark-border {
@@ -51094,3 +51094,13 @@ body,
 }
 
 /*# sourceMappingURL=style.css.map */
+.rounded-circle {
+  border-radius: 50% !important;
+  width: 130px;
+  height: 130px;
+  object-fit: cover;
+}
+.testimonial-container {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
